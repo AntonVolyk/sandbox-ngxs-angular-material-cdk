@@ -6,15 +6,21 @@ import { Component, OnInit, NgZone, ChangeDetectorRef } from '@angular/core';
   styleUrls: ['./a11y.component.scss']
 })
 export class A11yComponent implements OnInit {
-  message: string;
+  originMessage: string;
+  subtreeMessage: string;
 
   constructor(private _ngZone: NgZone, private _cdr: ChangeDetectorRef) { }
 
   ngOnInit(): void {
   }
 
-  onCdkFocusChanged(event) {
-    this.message = event ? `${event} focused` : 'blurred';
+  onCdkElementFocusChanged(event) {
+    this.originMessage = event ? `${event} focused` : 'blurred';
+    this.markForCheck();
+  }
+
+  onCdkSubtreeFocusChanged(event) {
+    this.subtreeMessage = event ? `${event} focused` : 'blurred';
     this.markForCheck();
   }
 

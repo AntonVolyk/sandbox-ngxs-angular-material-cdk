@@ -1,10 +1,11 @@
 <div class="example-focus-monitor">
-    <button cdkMonitorElementFocus (cdkFocusChange)="onCdkFocusChanged($event)">
-        Focus Monitored Element {{message}} 
+    <button cdkMonitorElementFocus (cdkFocusChange)="onCdkElementFocusChanged($event)">
+        Focus Monitored Element {{originMessage}} 
     </button>
 </div>
 <div class="example-focus-monitor">
-    <div cdkMonitorSubtreeFocus (cdkFocusChange)="onCdkFocusChanged($event)">
+    <div cdkMonitorSubtreeFocus (cdkFocusChange)="onCdkSubtreeFocusChanged($event)">
+        <p>Focus Monitored Subtree ({{subtreeMessage}})</p>
         <button>
             Child Button 1
         </button>
