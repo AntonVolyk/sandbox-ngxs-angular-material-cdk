@@ -1,11 +1,11 @@
-import { Injectable } from "@angular/core";
+import { Injectable } from '@angular/core';
 import { State, Selector } from '@ngxs/store';
 
 interface MaterialStateModel {
-    components: string[];
+  components: string[];
 }
 
-@State<object>({
+@State<MaterialStateModel>({
     name: 'material',
     defaults: {
         components: ['slider']

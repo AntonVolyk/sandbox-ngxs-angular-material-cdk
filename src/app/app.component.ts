@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MaterialState } from './store/material-state';
-import { Select} from '@ngxs/store';
+import { Select, Store} from '@ngxs/store';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -13,13 +13,16 @@ export class AppComponent implements OnInit {
 
   title = 'material-cdk-ngxs';
 
-  constructor() {}
+  constructor(private store: Store) {}
 
   ngOnInit() {
     this.components$.subscribe(val => {
       console.log(val);
     });
-    
+  }
+
+  onCheckStore() {
+    console.log(this.store.snapshot());
   }
 
 }
