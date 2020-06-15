@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "material-cdk-ngxs"
+    }
+  },
+  "defaultProject": "material-cdk-ngxs",
+  "cli": {
+    "analytics": "17e31d95-7200-45fb-b16b-5cc0771dfae8"
+  }
 }
