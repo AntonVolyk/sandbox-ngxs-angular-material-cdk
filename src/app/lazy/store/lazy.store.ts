@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { State, Selector } from '@ngxs/store';
+import { State, Selector, Store } from '@ngxs/store';
 
 @State<object>({
     name: 'lazy',

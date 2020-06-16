@@ -14,6 +14,9 @@ import { environment } from 'src/environments/environment';
 import { PortalModule } from '@angular/cdk/portal';
 import { A11yComponent } from './a11y/a11y.component';
 import { A11yModule } from '@angular/cdk/a11y';
+import {ObserversModule} from '@angular/cdk/observers';
+import {OverlayModule} from '@angular/cdk/overlay';
+import {PlatformModule} from '@angular/cdk/platform';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,10 @@ import { A11yModule } from '@angular/cdk/a11y';
     NgxsModule.forRoot([MaterialState], {developmentMode: !environment.production}),
     MatSliderModule,
     PortalModule,
-    A11yModule
+    ObserversModule,
+    A11yModule,
+    OverlayModule,
+    PlatformModule
   ],
   providers: [],
   bootstrap: [AppComponent]
