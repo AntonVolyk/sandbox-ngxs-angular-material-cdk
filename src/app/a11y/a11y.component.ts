@@ -9,7 +9,7 @@ export class A11yComponent implements OnInit {
   originMessage: string;
   subtreeMessage: string;
 
-  constructor(private _ngZone: NgZone, private _cdr: ChangeDetectorRef) { }
+  constructor(private ngZone: NgZone, private cdr: ChangeDetectorRef) { }
 
   ngOnInit(): void {
   }
@@ -25,8 +25,8 @@ export class A11yComponent implements OnInit {
   }
 
   private markForCheck() {
-    this._ngZone.run(() => {
-      this._cdr.markForCheck();
+    this.ngZone.run(() => {
+      this.cdr.markForCheck();
     });
   }
 
